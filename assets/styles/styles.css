@@ -12,16 +12,58 @@ body {
   font-size: 1.6rem;
 }
 
+:root {
+  --primary-color: #5d3bee;
+  --secondary-color: #fbfaff;
+}
+
 /* Common */
 a {
   text-decoration: none;
   color: currentColor;
 }
 
+.heading {
+  color: #080415;
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.21;
+  letter-spacing: -1.12px;
+}
+
+.desc {
+  color: #51586a;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.btn {
+  --height: 55px;
+
+  /* Button */
+  min-width: 147px;
+  background-color: var(--primary-color);
+
+  color: #fdfdfd;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--height);
+}
+
 /******************** Header ********************/
+/* Hide on mobile, table */
+.nav__mail,
+.nav-list {
+  display: none;
+}
+
 .header {
-  background-color: #fbfaff;
-  padding-top: 20px;
+  background-color: var(--secondary-color);
+  padding-top: 15px;
 }
 
 .nav {
@@ -29,23 +71,17 @@ a {
   align-items: center;
   justify-content: space-between;
 
-  max-width: 377px;
-  margin: auto 0;
-  padding: 0 14px;
+  width: calc(100% - 12px);
+  margin: 0 auto;
+  padding: 0 14px 10px;
   border-bottom: 1px solid #d6d3e2;
-}
-
-/* Hide on mobile, table */
-.nav__mail,
-.nav-list {
-  display: none;
 }
 
 .nav__avatar {
   width: 37px;
   height: 44px;
   object-fit: cover;
-  translate: 0 3px;
+  translate: -7px 3px;
 
   order: 1;
 }
@@ -69,4 +105,66 @@ a {
   height: 32px;
   border-radius: 50%;
   border: 1px solid rgba(93, 59, 238, 0.2);
+}
+
+/******************** Hero ********************/
+.hero {
+  margin-top: 50.5px;
+}
+
+.hero .container {
+  padding: 0 20px;
+}
+
+.hero__heading {
+  font-size: 4.2rem;
+  line-height: 1.19;
+  letter-spacing: -1.68px;
+}
+
+.hero__desc {
+  width: 318px;
+  margin-top: 20px;
+}
+
+.hero__cta-group {
+  margin-top: 30px;
+
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+}
+
+.hero__link {
+  color: #080415;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  text-decoration-line: underline;
+}
+
+.social-group {
+  margin-top: 25px;
+
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.social__circle-group {
+  display: flex;
+  column-gap: 15px;
+}
+
+.social__circle {
+  /* Style circle */
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  border: 1px solid rgba(8, 4, 21, 0.1);
+
+  /* Center content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
