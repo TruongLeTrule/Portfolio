@@ -80,6 +80,14 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
 
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
     <!-- Reset -->
     <link rel="stylesheet" href="./assets/styles/reset.css" />
 
@@ -94,7 +102,57 @@
     <!-- Styles -->
     <link rel="stylesheet" href="./assets/styles/styles.css" />
   </head>
+
   <body>
-    <h1>Test</h1>
+    <!-- Header -->
+    <header class="header">
+      <!-- Nav bar -->
+      <nav class="nav">
+        <div class="nav__circle-group">
+          <!-- Cta group -->
+          <a class="nav__cta-group">
+            <div class="nav__circle">
+              <img
+                src="./assets/images/letter.svg"
+                alt=""
+                class="nav__letter-icon"
+              />
+            </div>
+            <span class="nav__mail">hi@arif.interactive</span>
+          </a>
+
+          <input type="checkbox" id="menu-toggle" hidden />
+          <label for="menu-toggle">
+            <div class="nav__circle">
+              <img src="./assets/images/menu.svg" alt="menu" />
+            </div>
+          </label>
+        </div>
+
+        <!-- Avatar -->
+        <a href="/"
+          ><img
+            src="./assets/images/avatar.png"
+            alt="avatar"
+            class="nav__avatar"
+        /></a>
+
+        <!-- Nav list -->
+        <ul class="nav-list">
+          <li>
+            <a href="#!" class="nav-item">Projects</a>
+          </li>
+          <li>
+            <a href="#!" class="nav-item">Journey</a>
+          </li>
+          <li>
+            <a href="#!" class="nav-item">Service</a>
+          </li>
+          <li>
+            <a href="#!" class="nav-item">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
   </body>
 </html>

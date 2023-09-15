@@ -1,3 +1,4 @@
+/* Init */
 * {
   box-sizing: border-box;
 }
@@ -9,4 +10,63 @@ html {
 
 body {
   font-size: 1.6rem;
+}
+
+/* Common */
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+/******************** Header ********************/
+.header {
+  background-color: #fbfaff;
+  padding-top: 20px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 377px;
+  margin: auto 0;
+  padding: 0 14px;
+  border-bottom: 1px solid #d6d3e2;
+}
+
+/* Hide on mobile, table */
+.nav__mail,
+.nav-list {
+  display: none;
+}
+
+.nav__avatar {
+  width: 37px;
+  height: 44px;
+  object-fit: cover;
+  translate: 0 3px;
+
+  order: 1;
+}
+
+.nav__circle-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  order: 2;
+}
+
+.nav__circle {
+  /* Center content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Style circle */
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(93, 59, 238, 0.2);
 }
