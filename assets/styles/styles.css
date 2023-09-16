@@ -205,3 +205,51 @@ a {
   bottom: 0;
   left: -21px;
 }
+
+/* Client */
+.client {
+  width: calc(100% - 54px);
+  margin-top: 60px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 60px 0;
+}
+
+.client__heading::before {
+  content: "";
+  display: inline-block;
+  width: 48px;
+  height: 2px;
+  background-color: var(--primary-color);
+
+  position: absolute;
+  left: 50%;
+  top: -5px;
+  translate: -50% 0;
+}
+
+.client__heading {
+  max-width: 169px;
+  text-align: center;
+  margin: 0 auto;
+
+  position: relative;
+}
+
+.client-group--large {
+  margin-top: 40px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.client-group--small:nth-child(3),
+.client-group--small:nth-child(4),
+.client-item ~ .client-item {
+  margin-top: 30px;
+}
+
+.client-item {
+  display: block;
+}
