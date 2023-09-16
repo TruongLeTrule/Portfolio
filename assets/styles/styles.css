@@ -49,6 +49,10 @@ a {
   line-height: 1.65;
 }
 
+.btn-wrap {
+  text-align: center;
+}
+
 .btn {
   --height: 55px;
 
@@ -215,7 +219,7 @@ a {
   left: -21px;
 }
 
-/* Client */
+/******************** Client ********************/
 .client {
   width: calc(100% - 54px);
   margin-top: 60px;
@@ -273,7 +277,7 @@ a {
   overflow: hidden;
 }
 
-.service__top {
+.service__header {
   text-align: center;
 }
 
@@ -285,6 +289,7 @@ a {
 /* Service group */
 .service-group {
   margin-top: 50px;
+  translate: 0;
 }
 
 .service-item {
@@ -359,4 +364,105 @@ a {
 
 .active-circle:nth-child(3)::after {
   translate: -52% -51%;
+}
+
+/******************** Project ********************/
+.project {
+  margin-top: 60px;
+  padding: 69px 0 60px;
+  background-color: var(--primary-color);
+}
+
+.project__header {
+  text-align: center;
+}
+
+.project__heading,
+.project__desc {
+  margin: 0 auto;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.project__heading {
+  max-width: 301px;
+}
+
+.project__desc {
+  max-width: 350px;
+  margin-top: 20px;
+  opacity: 0.6;
+}
+
+/* Project group */
+.project-group {
+  max-width: calc(100% - 40px);
+  margin: 60px auto 0;
+}
+
+.project-group .container {
+  padding: 0;
+}
+
+.project-group .col ~ .col {
+  margin-top: 20px;
+}
+
+.project-item {
+  background-color: #fbfaff;
+  padding: 20px 15px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+}
+
+.projet-item__content,
+.project-item__img {
+  position: relative;
+  z-index: 1;
+}
+
+.projet-item__content {
+  width: 52%;
+}
+
+.project-item__heading {
+  font-size: 2.4rem;
+  line-height: 1.41;
+  letter-spacing: -0.96px;
+}
+
+.project-item__desc {
+  margin-top: 4px;
+  color: #51586a;
+  font-size: 1.4rem;
+  line-height: 1.42;
+}
+
+.project-item__link {
+  margin-top: 4px;
+  color: #080415;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.75;
+  text-decoration-line: underline;
+}
+
+.project-item__decor {
+  position: absolute;
+  bottom: 0;
+  left: 90px;
+  z-index: 0;
+}
+
+.project__btn {
+  --height: 56px;
+  color: #080415;
+  background-color: #fff;
+  margin-top: 50px;
+  min-width: 154px;
 }
