@@ -127,10 +127,6 @@ a {
   margin-top: 50.5px;
 }
 
-.hero .container {
-  padding: 0 20px;
-}
-
 /* Hero content */
 .hero__heading {
   max-width: 260px;
@@ -398,10 +394,6 @@ a {
 .project-group {
   max-width: calc(100% - 40px);
   margin: 60px auto 0;
-}
-
-.project-group .container {
-  padding: 0;
 }
 
 .project-group .col ~ .col {
