@@ -24,6 +24,11 @@ a {
 }
 
 .heading {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heading {
   color: #080415;
   font-size: 3.6rem;
   font-style: normal;
@@ -134,6 +139,9 @@ a {
   font-size: 4.2rem;
   line-height: 1.19;
   letter-spacing: -1.68px;
+
+  text-align: left;
+  margin: 0;
 }
 
 .hero__desc {
@@ -240,7 +248,6 @@ a {
 .client__heading {
   max-width: 169px;
   text-align: center;
-  margin: 0 auto;
   position: relative;
 
   font-size: 2.8rem;
@@ -375,8 +382,6 @@ a {
 
 .project__heading,
 .project__desc {
-  margin: 0 auto;
-  margin: 0 auto;
   color: #fff;
 }
 
@@ -386,8 +391,9 @@ a {
 
 .project__desc {
   max-width: 350px;
-  margin-top: 20px;
   opacity: 0.6;
+
+  margin: 20px auto 0;
 }
 
 /* Project group */
@@ -457,4 +463,135 @@ a {
   background-color: #fff;
   margin-top: 50px;
   min-width: 154px;
+}
+
+/* Stat */
+.stat {
+  margin: 60px auto 0;
+  padding-top: 60px;
+  width: calc(100% - 40px);
+}
+
+.stat__header {
+  text-align: center;
+}
+
+.stat__greeting {
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2;
+  letter-spacing: -0.8px;
+
+  margin-right: 4px;
+}
+
+.stat__heading {
+  margin-top: 10px;
+}
+
+.stat__desc {
+  margin-top: 20px;
+}
+
+.stat-group {
+  margin-top: 50px;
+  padding: 30px 16px;
+  border-top: 1px solid rgba(8, 4, 21, 0.2);
+  border-bottom: 1px solid rgba(8, 4, 21, 0.2);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.stat-item:first-child {
+  order: 2;
+}
+
+.stat-item:nth-child(2) {
+  order: 1;
+}
+
+.stat-item:nth-child(3) {
+  order: 3;
+}
+
+.stat-item__number {
+  color: #080415;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.9px;
+  text-decoration-line: underline;
+}
+
+.stat__desc {
+  color: #51586a;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.37;
+}
+
+.stat-video {
+  margin-top: 40px;
+  position: relative;
+}
+
+.stat-video__thumb {
+  width: 100%;
+  height: 276px;
+  object-fit: cover;
+  object-position: -50px -1px;
+}
+
+.stat-video__play-btn,
+.stat-video__label {
+  position: absolute;
+}
+
+.stat-video__play-btn {
+  /* Center the button */
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+
+  /* Style */
+  width: 77px;
+  height: 77px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: none;
+  outline: none;
+
+  /* Center the play button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat-video__label {
+  width: 118px;
+  height: 44px;
+  background-color: #fff;
+  padding: 7px 0;
+  text-align: center;
+  right: 10px;
+  bottom: 10px;
+
+  /* Text */
+  color: #51586a;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.5;
+}
+
+/******************** Feedback ********************/
+.feedback {
+  height: 400px;
+  margin-top: -108px;
+  background-color: #fbfaff;
 }
