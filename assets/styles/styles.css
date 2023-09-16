@@ -25,10 +25,19 @@ a {
 
 .heading {
   color: #080415;
+  font-size: 3.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.16;
+  letter-spacing: -1.44px;
+}
+
+.heading--small {
+  color: #080415;
   font-size: 2.8rem;
   font-style: normal;
   font-weight: 500;
-  line-height: 1.21;
+  line-height: 1.28;
   letter-spacing: -1.12px;
 }
 
@@ -232,8 +241,11 @@ a {
   max-width: 169px;
   text-align: center;
   margin: 0 auto;
-
   position: relative;
+
+  font-size: 2.8rem;
+  line-height: 1.21;
+  letter-spacing: -1.12px;
 }
 
 .client-group--large {
@@ -252,4 +264,99 @@ a {
 
 .client-item {
   display: block;
+}
+
+/* Service */
+.service {
+  margin-top: 60px;
+  padding-bottom: 60px;
+  overflow: hidden;
+}
+
+.service__top {
+  text-align: center;
+}
+
+.service__desc {
+  max-width: 350px;
+  margin: 20px auto 0;
+}
+
+/* Service group */
+.service-group {
+  margin-top: 50px;
+}
+
+.service-item {
+  max-width: 350px;
+  height: 280px;
+  background-color: #fbfaff;
+
+  padding: 29px 50px;
+  margin: 0 auto;
+}
+
+.service-group .col:first-child img {
+  translate: 0 5px;
+}
+
+.service-item__icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  border: 1px solid rgba(8, 4, 21, 0.05);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-item__heading {
+  margin-top: 30px;
+}
+
+.service-item__desc {
+  margin-top: 20px;
+}
+
+/* Active circle group */
+.active-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 15px;
+
+  margin-top: 32px;
+}
+
+.active-circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: rgba(8, 4, 21, 0.2);
+}
+
+.active-circle.active {
+  width: 12px;
+  height: 12px;
+  background-color: var(--primary-color);
+  position: relative;
+}
+
+.active-circle.active::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--primary-color);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -48% -52%;
+}
+
+.active-circle:nth-child(3)::after {
+  translate: -52% -51%;
 }
