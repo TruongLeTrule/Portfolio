@@ -106,27 +106,27 @@
     <link rel="stylesheet" href="./assets/styles/responsive.css" />
   </head>
 
-  <body style="height: 10000px">
+  <body>
     <!-- Header -->
     <header class="header">
       <!-- Nav bar -->
       <nav class="nav">
         <div class="nav__circle-group">
-          <!-- Cta group -->
-          <a class="nav__cta-group">
-            <div class="nav__circle">
+          <!-- Mail group -->
+          <a href="#!" class="mail-group">
+            <div class="circle">
               <img
                 src="./assets/images/letter.svg"
                 alt=""
-                class="nav__letter-icon"
+                class="mail__letter-icon"
               />
             </div>
-            <span class="nav__mail">hi@arif.interactive</span>
+            <span class="mail__link">hi@arif.interactive</span>
           </a>
 
-          <input type="checkbox" id="menu-toggle" hidden />
+          <input type="radio" id="menu-toggle" hidden />
           <label for="menu-toggle">
-            <div class="nav__circle">
+            <div class="circle">
               <img src="./assets/images/menu.svg" alt="menu" />
             </div>
           </label>
@@ -182,7 +182,7 @@
                   <p class="social__desc">Follow me on:</p>
 
                   <div class="social__circle-group">
-                    <div class="social__circle">
+                    <div class="circle">
                       <img
                         src="./assets/images/behance.svg"
                         alt="behance"
@@ -190,7 +190,7 @@
                       />
                     </div>
 
-                    <div class="social__circle">
+                    <div class="circle">
                       <img
                         src="./assets/images/ball.svg"
                         alt="ball"
@@ -198,7 +198,7 @@
                       />
                     </div>
 
-                    <div class="social__circle">
+                    <div class="circle">
                       <img
                         src="./assets/images/instagram.svg"
                         alt="instagram"
@@ -742,7 +742,7 @@
                 </p>
               </div>
               <!-- Answer toggle -->
-              <label for="answer-toggle1" class="faq__toggle-btn"
+              <label for="answer-toggle1" class="faq__toggle-btn circle"
                 ><img src="./assets/images/plus.svg" alt="" class="plus-btn" />
                 <img src="./assets/images/minus.svg" alt="" class="minus-btn"
               /></label>
@@ -767,7 +767,7 @@
                 </p>
               </div>
               <!-- Answer toggle -->
-              <label for="answer-toggle2" class="faq__toggle-btn"
+              <label for="answer-toggle2" class="faq__toggle-btn circle"
                 ><img src="./assets/images/plus.svg" alt="" class="plus-btn" />
                 <img src="./assets/images/minus.svg" alt="" class="minus-btn"
               /></label>
@@ -792,7 +792,7 @@
                 </p>
               </div>
               <!-- Answer toggle -->
-              <label for="answer-toggle3" class="faq__toggle-btn"
+              <label for="answer-toggle3" class="faq__toggle-btn circle"
                 ><img src="./assets/images/plus.svg" alt="" class="plus-btn" />
                 <img src="./assets/images/minus.svg" alt="" class="minus-btn"
               /></label>
@@ -817,7 +817,7 @@
                 </p>
               </div>
               <!-- Answer toggle -->
-              <label for="answer-toggle4" class="faq__toggle-btn"
+              <label for="answer-toggle4" class="faq__toggle-btn circle"
                 ><img src="./assets/images/plus.svg" alt="" class="plus-btn" />
                 <img src="./assets/images/minus.svg" alt="" class="minus-btn"
               /></label>
@@ -875,6 +875,55 @@
           </div>
         </section>
       </div>
+
+      <!-- CTA -->
+      <section class="cta">
+        <div class="cta-content">
+          <img src="./assets/images/congrat-icon.svg" alt="congrat icon" />
+          <h2 class="heading cta__heading">Got a project? Let’s talk</h2>
+          <p class="cta__desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna,
+            non nisl tincidunt ut elementum turpis.
+          </p>
+          <a href="#!" class="btn cta__btn">Book a Call</a>
+        </div>
+        <img src="./assets/images/cta-decor.svg" alt="" class="cta__decor" />
+      </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <img
+        src="./assets/images/avatar.png"
+        alt="avatar"
+        class="footer__avatar"
+      />
+
+      <!-- Nav -->
+      <nav class="footer__nav">
+        <ul class="footer__nav-list">
+          <li><a href="#!" class="footer__nav-item">Projects</a></li>
+          <li><a href="#!" class="footer__nav-item">Journey</a></li>
+          <li><a href="#!" class="footer__nav-item">Service</a></li>
+          <li><a href="#!" class="footer__nav-item">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mail group -->
+      <a href="#!" class="mail-group">
+        <div class="circle">
+          <img
+            src="./assets/images/letter.svg"
+            alt=""
+            class="mail__letter-icon"
+          />
+        </div>
+        <span class="mail__link">hi@arif.interactive</span>
+      </a>
+      <p class="footer__privacy">Privacy Policy | Terms of Conditions</p>
+      <p class="footer__copyright">
+        ©interactiveArif 2021. All rights reserved.
+      </p>
+    </footer>
   </body>
 </html>
