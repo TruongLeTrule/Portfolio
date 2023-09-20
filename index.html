@@ -108,32 +108,72 @@
 
   <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
       <!-- Nav bar -->
       <nav class="nav">
         <div class="nav__circle-group">
           <!-- Mail group -->
-          <a href="#!" class="mail-group">
-            <div class="circle">
+          <div class="mail-group">
+            <a href="#!" class="circle">
               <img
                 src="./assets/images/letter.svg"
                 alt=""
                 class="mail__letter-icon"
               />
-            </div>
-            <span class="mail__link">hi@arif.interactive</span>
-          </a>
+            </a>
+            <a href="#!" class="mail__link">hi@arif.interactive</a>
+          </div>
 
-          <input type="radio" id="menu-toggle" hidden />
-          <label for="menu-toggle">
+          <input type="checkbox" id="menu-toggle" hidden />
+          <label for="menu-toggle" class="menu-toggle">
             <div class="circle">
               <img src="./assets/images/menu.svg" alt="menu" />
             </div>
           </label>
+
+          <label for="menu-toggle" class="menu-cover"></label>
+
+          <div class="menu-drawer">
+            <!-- Avatar -->
+            <a href="#header"
+              ><img
+                src="./assets/images/avatar.png"
+                alt="avatar"
+                class="nav__avatar"
+            /></a>
+
+            <!-- Nav list -->
+            <ul>
+              <li>
+                <a href="#service" class="nav-item">Service</a>
+              </li>
+              <li>
+                <a href="#project" class="nav-item">Projects</a>
+              </li>
+              <li>
+                <a href="#stat" class="nav-item">Journey</a>
+              </li>
+              <li>
+                <a href="#contact" class="nav-item">Contact</a>
+              </li>
+            </ul>
+
+            <!-- Mail group -->
+            <div class="mail-group">
+              <a href="#!" class="circle">
+                <img
+                  src="./assets/images/letter.svg"
+                  alt=""
+                  class="mail__letter-icon"
+                />
+              </a>
+              <a href="#!" class="mail__link">hi@arif.interactive</a>
+            </div>
+          </div>
         </div>
 
         <!-- Avatar -->
-        <a href="/"
+        <a href="#header"
           ><img
             src="./assets/images/avatar.png"
             alt="avatar"
@@ -143,16 +183,16 @@
         <!-- Nav list -->
         <ul class="nav-list">
           <li>
-            <a href="#!" class="nav-item">Projects</a>
+            <a href="#service" class="nav-item">Service</a>
           </li>
           <li>
-            <a href="#!" class="nav-item">Journey</a>
+            <a href="#project" class="nav-item">Projects</a>
           </li>
           <li>
-            <a href="#!" class="nav-item">Service</a>
+            <a href="#stat" class="nav-item">Journey</a>
           </li>
           <li>
-            <a href="#!" class="nav-item">Contact</a>
+            <a href="#contact" class="nav-item">Contact</a>
           </li>
         </ul>
       </nav>
@@ -302,7 +342,7 @@
         </section>
 
         <!-- Service -->
-        <section class="service">
+        <section class="service" id="service">
           <!-- Header -->
           <div class="service__header">
             <h2 class="heading">Specialties</h2>
@@ -374,7 +414,7 @@
         </section>
 
         <!-- Project -->
-        <section class="project">
+        <section class="project" id="project">
           <!-- Header -->
           <section class="project__header">
             <h1 class="heading project__heading">
@@ -518,7 +558,7 @@
         </section>
 
         <!-- Stat -->
-        <section class="stat">
+        <section class="stat" id="stat">
           <!-- Header -->
           <section class="stat__header">
             <div>
@@ -876,18 +916,22 @@
         </section>
       </div>
 
-      <!-- CTA -->
-      <section class="cta">
-        <div class="cta-content">
+      <!-- Contact -->
+      <section class="contact" id="contact">
+        <div class="contact-content">
           <img src="./assets/images/congrat-icon.svg" alt="congrat icon" />
-          <h2 class="heading cta__heading">Got a project? Let’s talk</h2>
-          <p class="cta__desc">
+          <h2 class="heading contact__heading">Got a project? Let’s talk</h2>
+          <p class="contact__desc">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna,
             non nisl tincidunt ut elementum turpis.
           </p>
-          <a href="#!" class="btn cta__btn">Book a Call</a>
+          <a href="#!" class="btn contact__btn">Book a Call</a>
         </div>
-        <img src="./assets/images/cta-decor.svg" alt="" class="cta__decor" />
+        <img
+          src="./assets/images/contact-decor.svg"
+          alt=""
+          class="contact__decor"
+        />
       </section>
     </main>
 
@@ -910,16 +954,16 @@
       </nav>
 
       <!-- Mail group -->
-      <a href="#!" class="mail-group">
-        <div class="circle">
+      <div href="#!" class="mail-group">
+        <a href="#!" class="circle">
           <img
             src="./assets/images/letter.svg"
             alt=""
             class="mail__letter-icon"
           />
-        </div>
-        <span class="mail__link">hi@arif.interactive</span>
-      </a>
+        </a>
+        <a href="#!" class="mail__link">hi@arif.interactive</a>
+      </div>
       <p class="footer__privacy">Privacy Policy | Terms of Conditions</p>
       <p class="footer__copyright">
         ©interactiveArif 2021. All rights reserved.

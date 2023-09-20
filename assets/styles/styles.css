@@ -162,7 +162,6 @@ main > .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   width: calc(100% - 12px);
   margin: 0 auto;
   padding: 0 14px 10px;
@@ -174,7 +173,6 @@ main > .container {
   height: 44px;
   object-fit: cover;
   translate: -7px 3px;
-
   order: 1;
 }
 
@@ -184,6 +182,69 @@ main > .container {
   justify-content: center;
   column-gap: 10px;
   order: 2;
+}
+
+.menu-drawer {
+  padding: 80px 48px;
+  background-color: #fff;
+  inset: 0 23% 0 0;
+  translate: -100%;
+  position: fixed;
+  z-index: 3;
+  transition: translate ease 0.4s;
+}
+
+.menu-drawer img {
+  height: 65px;
+}
+
+.menu-drawer .nav-item {
+  color: #51586a;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.menu-drawer ul,
+.menu-drawer li ~ li {
+  margin-top: 40px;
+}
+
+.menu-drawer ul {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #bbb8b8;
+}
+
+.menu-drawer .mail-group {
+  margin-top: 28px;
+}
+
+.menu-cover {
+  inset: 0;
+  position: fixed;
+  z-index: 2;
+  background-color: #f0efef64;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity ease 0.4s, visibility 0;
+}
+
+#menu-toggle:checked ~ .menu-drawer {
+  translate: 0;
+}
+
+#menu-toggle:checked ~ .menu-cover {
+  opacity: 100%;
+  visibility: visible;
+}
+
+.menu-drawer .circle {
+  display: none;
+}
+
+.menu-drawer .mail__link {
+  display: inline;
+  font-size: 1.8rem;
 }
 
 /******************** Hero ********************/
@@ -806,8 +867,8 @@ main > .container {
   display: block;
 }
 
-/******************** CTA ********************/
-.cta {
+/******************** Contact ********************/
+.contact {
   position: relative;
   margin: 60px auto 0;
   padding: 36px 22px;
@@ -816,27 +877,27 @@ main > .container {
   overflow: hidden;
 }
 
-.cta-content {
+.contact-content {
   position: relative;
   z-index: 1;
 }
 
-.cta__heading {
+.contact__heading {
   margin-top: 10px;
   max-width: 225px;
 }
 
-.cta__desc {
+.contact__desc {
   margin: 10px auto 0;
   max-width: 350px;
   text-align: center;
 }
 
-.cta__btn {
+.contact__btn {
   margin-top: 30px;
 }
 
-.cta__decor {
+.contact__decor {
   position: absolute;
   left: 50%;
   top: 50%;
