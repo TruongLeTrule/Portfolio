@@ -74,6 +74,44 @@ a {
   line-height: var(--height);
 }
 
+/* Active circle group */
+.active-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 15px;
+
+  margin-top: 32px;
+}
+
+.active-circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: rgba(8, 4, 21, 0.2);
+}
+
+.active-circle.active {
+  width: 12px;
+  height: 12px;
+  background-color: var(--primary-color);
+  position: relative;
+}
+
+.active-circle.active::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--primary-color);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
 /******************** Main ********************/
 main > .container {
   padding: 0;
@@ -333,48 +371,6 @@ main > .container {
 
 .service-item__desc {
   margin-top: 20px;
-}
-
-/* Active circle group */
-.active-group {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 15px;
-
-  margin-top: 32px;
-}
-
-.active-circle {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: rgba(8, 4, 21, 0.2);
-}
-
-.active-circle.active {
-  width: 12px;
-  height: 12px;
-  background-color: var(--primary-color);
-  position: relative;
-}
-
-.active-circle.active::after {
-  content: "";
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 1px solid var(--primary-color);
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -48% -52%;
-}
-
-.active-circle:nth-child(3)::after {
-  translate: -52% -51%;
 }
 
 /******************** Project ********************/
@@ -690,7 +686,7 @@ main > .container {
 /******************** FAQ ********************/
 .faq {
   margin: 60px auto 0;
-  padding-top: 60px;
+  padding: 60px 0;
   max-width: calc(100% - 40px);
 }
 
@@ -775,4 +771,45 @@ main > .container {
 
 .faq-item:has([type="radio"]:checked) .plus-btn {
   display: none;
+}
+
+/******************** Mood ********************/
+.mood {
+  margin: 60px auto 0;
+  padding-bottom: 60px;
+  max-width: calc(100% - 40px);
+  overflow: hidden;
+}
+
+.mood__desc {
+  max-width: 350px;
+  margin: 20px auto 0;
+  text-align: center;
+}
+
+.mood__link {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.8px;
+  text-decoration-line: underline;
+}
+
+.mood__img-group {
+  margin-top: 60px;
+}
+
+.mood__img-group .row {
+  translate: 0;
+}
+
+.mood__img {
+  width: 352px;
+  height: 503px;
+  object-fit: cover;
+  display: block;
 }
