@@ -804,7 +804,7 @@ main > .container {
 .faq__toggle-btn .minus-btn,
 .faq__toggle-btn .plus-btn {
   position: absolute;
-  transition: opacity 0.25s linear;
+  transition: opacity 0.6s ease;
 }
 
 .faq__toggle-btn .minus-btn,
