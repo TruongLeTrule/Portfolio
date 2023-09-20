@@ -758,7 +758,7 @@ main > .container {
   max-width: 316px;
   text-align: left;
   margin: 0;
-  animation: color 0.4 ease;
+  transition: color 0.4s ease;
 }
 
 .faq-group {
@@ -771,7 +771,10 @@ main > .container {
   padding: 0 10px 15px;
   margin: 0 -10px;
   border-bottom: 2px solid #08182f;
-  animation: border 0.4 ease;
+}
+
+.faq-item__content {
+  height: auto;
 }
 
 .faq-item ~ .faq-item {
@@ -788,26 +791,38 @@ main > .container {
 .faq-item__answer {
   margin-top: 15px;
   height: 0;
-  /* visibility: hidden; */
-  /* opacity: 0; */
+  opacity: 0;
   overflow: hidden;
-  transition: visibility 0s, opacity 0.3s ease, height 0.3s ease;
+  transition: height 0.4s ease, opacity 0.4s ease;
 }
 
-.faq__toggle-btn .minus-btn {
-  display: none;
+.faq__toggle-btn {
+  position: relative;
 }
 
+.faq__toggle-btn .minus-btn,
 .faq__toggle-btn .plus-btn {
-  display: block;
+  position: absolute;
+  transition: opacity 0.25s linear;
+}
+
+.faq__toggle-btn .minus-btn,
+.faq-item:has([type="radio"]:checked) .plus-btn {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.faq__toggle-btn .plus-btn,
+.faq-item:has([type="radio"]:checked) .minus-btn {
+  opacity: 100%;
+  visibility: visible;
 }
 
 /* Show answer when click button */
 [type="radio"]:checked ~ .faq-item__answer {
   visibility: visible;
   opacity: 100%;
-  height: auto;
-  display: block;
+  height: 80px;
 }
 
 .faq-item:has([type="radio"]:checked) {
@@ -816,14 +831,6 @@ main > .container {
 
 .faq-item:has([type="radio"]:checked) .faq-item__question {
   color: var(--primary-color);
-}
-
-.faq-item:has([type="radio"]:checked) .minus-btn {
-  display: block;
-}
-
-.faq-item:has([type="radio"]:checked) .plus-btn {
-  display: none;
 }
 
 /******************** Mood ********************/
