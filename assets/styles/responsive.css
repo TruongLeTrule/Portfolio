@@ -120,6 +120,25 @@
   .mood .active-group {
     display: none;
   }
+
+  /* Contact */
+  .contact__decor--left,
+  .contact__decor--right {
+    display: block;
+    position: absolute;
+  }
+
+  .contact__decor--left {
+    left: 0;
+    bottom: 0;
+    translate: -15% 1%;
+  }
+
+  .contact__decor--right {
+    right: 0;
+    top: 0;
+    translate: 19% -1%;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */

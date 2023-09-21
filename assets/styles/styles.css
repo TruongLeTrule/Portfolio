@@ -927,6 +927,12 @@ main > .container {
   z-index: 0;
 }
 
+/* Hide on mobile */
+.contact__decor--left,
+.contact__decor--right {
+  display: none;
+}
+
 /******************** Footer ********************/
 .footer {
   margin: 60px auto 0;
