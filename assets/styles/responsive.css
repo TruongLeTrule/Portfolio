@@ -4,16 +4,36 @@
   .hero .container {
     padding: 0 20px;
   }
-
-  /* Project */
-  .project .container,
-  .project-group .container {
-    padding: 0;
-  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  /* Nav */
+  .nav {
+    width: calc(100% - 60px);
+    padding: 0 25px 10px;
+  }
+
+  /* Hero */
+  .hero {
+    margin-top: 0;
+  }
+
+  .hero__img {
+    width: 324px;
+    height: 474px;
+  }
+
+  .social-group {
+    left: 0;
+    bottom: 20px;
+    position: absolute;
+  }
+
+  .hero__decor--left {
+    scale: 124%;
+    translate: -38% -54%;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -22,8 +42,4 @@
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-}
-
-/* XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) {
 }

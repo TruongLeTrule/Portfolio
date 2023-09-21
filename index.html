@@ -200,8 +200,10 @@
       <!-- Hero -->
       <section class="hero">
         <div class="container">
-          <div class="row row-cols-1">
-            <div class="col order-1">
+          <div class="row row-cols-md-2 row-cols-1">
+            <div
+              class="col col-md-5 offset-md-2 order-md-2 order-1 d-flex align-items-center position-relative p-0"
+            >
               <!-- Hero content-->
               <section class="hero__content">
                 <!-- Content -->
@@ -222,35 +224,35 @@
                   <p class="social__desc">Follow me on:</p>
 
                   <div class="social__circle-group">
-                    <div class="circle">
+                    <a href="#!" class="circle">
                       <img
                         src="./assets/images/behance.svg"
                         alt="behance"
                         class="social__icon"
                       />
-                    </div>
+                    </a>
 
-                    <div class="circle">
+                    <a href="#!" class="circle">
                       <img
                         src="./assets/images/ball.svg"
                         alt="ball"
                         class="social__icon"
                       />
-                    </div>
+                    </a>
 
-                    <div class="circle">
+                    <a href="#!" class="circle">
                       <img
                         src="./assets/images/instagram.svg"
                         alt="instagram"
                         class="social__icon"
                       />
-                    </div>
+                    </a>
                   </div>
                 </div>
               </section>
             </div>
 
-            <div class="col order-2">
+            <div class="col col-md-5 order-md-1 order-2">
               <!-- Hero media -->
               <div class="hero__media">
                 <figure>
@@ -262,13 +264,17 @@
                 </figure>
 
                 <img
-                  src="./assets/images/header-decoration.svg"
-                  class="hero__decor"
+                  src="./assets/images/header-decoration-01.svg"
+                  class="hero__decor--left"
                 />
               </div>
             </div>
           </div>
         </div>
+        <img
+          src="./assets/images/header-decoration-02.svg"
+          class="hero__decor--right"
+        />
       </section>
     </header>
 
@@ -412,9 +418,11 @@
             <div class="active-circle"></div>
           </div>
         </section>
+      </div>
 
-        <!-- Project -->
-        <section class="project" id="project">
+      <!-- Project -->
+      <section class="project" id="project">
+        <div class="container">
           <!-- Header -->
           <section class="project__header">
             <h1 class="heading project__heading">
@@ -555,8 +563,10 @@
               <a href="#!" class="btn project__btn">All Projects</a>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
+      <div class="container">
         <!-- Stat -->
         <section class="stat" id="stat">
           <!-- Header -->

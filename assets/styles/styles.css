@@ -242,7 +242,7 @@ main > .container {
   display: none;
 }
 
-.menu-drawer .mail__link {
+#menu-toggle:checked ~ .menu-drawer .mail__link {
   display: inline;
   font-size: 1.8rem;
 }
@@ -250,6 +250,8 @@ main > .container {
 /******************** Hero ********************/
 .hero {
   margin-top: 50.5px;
+  overflow: hidden;
+  position: relative;
 }
 
 /* Hero content */
@@ -275,6 +277,8 @@ main > .container {
   display: flex;
   align-items: center;
   column-gap: 40px;
+  flex-wrap: wrap;
+  row-gap: 20px;
 }
 
 .hero__link {
@@ -287,7 +291,6 @@ main > .container {
 
 .social-group {
   margin-top: 25px;
-
   display: flex;
   column-gap: 10px;
   align-items: center;
@@ -324,10 +327,18 @@ main > .container {
   z-index: 1;
 }
 
-.hero__decor {
+/* Hero decoration */
+.hero__decor--left {
   position: absolute;
-  bottom: 0;
-  left: -21px;
+  top: 50%;
+  left: 50%;
+  translate: -50% -56%;
+}
+
+.hero__decor--right {
+  display: none;
+  position: absolute;
+  z-index: 0;
 }
 
 /******************** Client ********************/
@@ -442,6 +453,7 @@ main > .container {
   margin-top: 60px;
   padding: 69px 0 60px;
   background-color: var(--primary-color);
+  overflow: hidden;
 }
 
 .project__header {
@@ -929,6 +941,8 @@ main > .container {
 .footer__nav-list {
   margin-top: 20px;
   display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 38px;
 }
 
