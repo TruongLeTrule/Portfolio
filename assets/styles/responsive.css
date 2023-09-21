@@ -40,6 +40,15 @@
   .client-group--small:nth-child(4) {
     margin-top: 0;
   }
+
+  /* Service */
+  .service-item {
+    max-width: 100%;
+  }
+
+  .service__desc {
+    max-width: 400px;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
