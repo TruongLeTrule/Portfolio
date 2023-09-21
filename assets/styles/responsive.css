@@ -36,10 +36,24 @@
   }
 
   /* Client */
+  .client-group--large {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+  }
+
   .client-group--small:nth-child(3),
   .client-group--small:nth-child(4) {
     margin-top: 0;
   }
+
+  .client-group--small:nth-child(2),
+  .client-group--small:nth-child(4) {
+    justify-items: flex-start;
+  }
+
+  /* .client-item ~ .client-item {
+      margin-top: 0;
+    } */
 
   /* Service */
   .service-item {
