@@ -605,7 +605,7 @@ main > .container {
   text-decoration-line: underline;
 }
 
-.stat__desc {
+.stat-item__desc {
   color: #51586a;
   font-size: 1.6rem;
   font-style: normal;

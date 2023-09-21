@@ -71,6 +71,12 @@
   .project-group {
     max-width: 100%;
   }
+
+  /* Stat */
+  .stat__desc {
+    width: 400px;
+    margin: 20px auto 0;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
