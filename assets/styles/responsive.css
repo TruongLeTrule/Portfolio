@@ -84,6 +84,20 @@
     object-position: 0 0;
   }
 
+  /* Feedback */
+  .feedback-decor--left,
+  .feedback-decor--right {
+    scale: 300%;
+  }
+
+  .feedback-decor--left {
+    translate: 100% -100%;
+  }
+
+  .feedback-decor--right {
+    translate: -99% -102%;
+  }
+
   /* FAQ */
   .faq__heading {
     max-width: 400px;
