@@ -101,6 +101,11 @@
     height: 50px;
     max-width: 600px;
   }
+
+  /* Mood */
+  .mood .active-group {
+    display: none;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */

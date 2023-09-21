@@ -878,6 +878,10 @@ main > .container {
   translate: 0;
 }
 
+.mood__img-wrap {
+  overflow: hidden;
+}
+
 .mood__img {
   width: 352px;
   height: 503px;
