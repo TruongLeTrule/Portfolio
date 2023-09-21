@@ -77,6 +77,12 @@
     width: 400px;
     margin: 20px auto 0;
   }
+
+  .stat-video__thumb {
+    width: 100%;
+    height: auto;
+    object-position: 0 0;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
