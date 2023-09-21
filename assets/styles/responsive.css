@@ -83,6 +83,24 @@
     height: auto;
     object-position: 0 0;
   }
+
+  /* FAQ */
+  .faq__heading {
+    max-width: 400px;
+  }
+
+  .faq-item {
+    padding-bottom: 10px;
+  }
+
+  .faq-item__question {
+    max-width: 100%;
+  }
+
+  [type="radio"]:checked ~ .faq-item__answer {
+    height: 50px;
+    max-width: 600px;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
