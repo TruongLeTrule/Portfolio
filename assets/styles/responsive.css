@@ -49,6 +49,28 @@
   .service__desc {
     max-width: 400px;
   }
+
+  /* Project */
+  .project__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .project__heading,
+  .project__desc {
+    text-align: left;
+    margin: 0;
+  }
+
+  .project__desc {
+    font-size: 1.3rem;
+    max-width: 300px;
+  }
+
+  .project-group {
+    max-width: 100%;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
