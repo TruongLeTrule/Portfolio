@@ -34,6 +34,12 @@
     scale: 124%;
     translate: -38% -54%;
   }
+
+  /* Client */
+  .client-group--small:nth-child(3),
+  .client-group--small:nth-child(4) {
+    margin-top: 0;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
