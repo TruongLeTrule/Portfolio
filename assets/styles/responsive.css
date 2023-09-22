@@ -268,4 +268,47 @@
     scale: 1.7;
     translate: -35% -54%;
   }
+
+  .hero__decor--right {
+    display: block;
+    bottom: 0;
+    right: 0;
+  }
+
+  /* Client */
+  .client {
+    margin-top: 98px;
+  }
+
+  .client__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .client__heading {
+    margin: 0;
+    margin-left: 99px;
+    max-width: 253px;
+    text-align: left;
+  }
+
+  .client__heading::before {
+    width: 86px;
+    left: -57px;
+    top: 22px;
+  }
+
+  .client-group--large {
+    margin-top: 0;
+  }
+
+  .client-item ~ .client-item {
+    margin-top: 34px;
+  }
+
+  .client-group--small:nth-child(2),
+  .client-group--small:nth-child(4) {
+    justify-items: flex-start;
+  }
 }
