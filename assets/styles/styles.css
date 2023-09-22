@@ -492,12 +492,11 @@ main > .container {
 .project-item {
   background-color: #fbfaff;
   padding: 20px 15px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   position: relative;
+  overflow: hidden;
 }
 
 .projet-item__content,
@@ -524,6 +523,7 @@ main > .container {
 }
 
 .project-item__link {
+  display: inline-block;
   margin-top: 4px;
   color: #080415;
   font-size: 1.6rem;
