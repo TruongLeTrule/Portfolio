@@ -150,9 +150,15 @@
 @media (min-width: 992px) {
   /* Common */
   .heading {
-    font-size: 4.2rem;
-    line-height: 1.19;
-    letter-spacing: -1.68px;
+    font-size: 56px;
+    line-height: 1.17;
+    letter-spacing: -2.24px;
+  }
+
+  .heading--small {
+    font-size: 3.2rem;
+    line-height: 1.25;
+    letter-spacing: -1.28px;
   }
 
   .circle {
@@ -177,6 +183,11 @@
     --height: 62px;
     min-width: 170px;
     font-size: 1.8rem;
+  }
+
+  .container {
+    width: 1170px;
+    max-width: calc(100% - 40px);
   }
 
   /* Header */
@@ -277,7 +288,8 @@
 
   /* Client */
   .client {
-    margin-top: 98px;
+    max-width: 100%;
+    margin: 98px 0 0;
   }
 
   .client__inner {
@@ -287,6 +299,9 @@
   }
 
   .client__heading {
+    font-size: 4.2rem;
+    line-height: 1.19;
+    letter-spacing: -1.68px;
     margin: 0;
     margin-left: 99px;
     max-width: 253px;
@@ -310,5 +325,45 @@
   .client-group--small:nth-child(2),
   .client-group--small:nth-child(4) {
     justify-items: flex-start;
+  }
+
+  /* Service */
+  .service {
+    margin-top: 73px;
+  }
+
+  .service__desc {
+    max-width: 534px;
+  }
+
+  .service-group {
+    margin-top: 60px;
+  }
+
+  .service-item {
+    width: 370px;
+    height: 306px;
+    padding: 33px 42px;
+  }
+
+  .service-item__icon {
+    width: 74px;
+    height: 74px;
+  }
+
+  .service-item__heading {
+    margin-top: 22px;
+  }
+
+  .service-item__desc {
+    margin-top: 15px;
+  }
+
+  .service .active-group {
+    display: none;
+  }
+
+  .service .col:last-child img {
+    translate: -3px 8px;
   }
 }

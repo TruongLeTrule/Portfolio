@@ -444,12 +444,7 @@ main > .container {
 .service-item__icon {
   width: 62px;
   height: 62px;
-  border-radius: 50%;
   border: 1px solid rgba(8, 4, 21, 0.05);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .service-item__heading {
