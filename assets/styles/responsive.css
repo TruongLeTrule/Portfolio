@@ -149,6 +149,12 @@
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   /* Common */
+  .heading {
+    font-size: 4.2rem;
+    line-height: 1.19;
+    letter-spacing: -1.68px;
+  }
+
   .circle {
     width: 46px;
     height: 46px;
@@ -162,9 +168,21 @@
     font-size: 2.2rem;
   }
 
+  .desc {
+    font-size: 1.8rem;
+    line-height: 1.66;
+  }
+
+  .btn {
+    --height: 62px;
+    min-width: 170px;
+    font-size: 1.8rem;
+  }
+
   /* Header */
   .header {
     padding-top: 20px;
+    height: 100vh;
   }
 
   /* Nav */
@@ -207,5 +225,47 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+  }
+
+  /* Hero */
+  .hero__img {
+    width: 565px;
+    height: 638px;
+  }
+
+  .hero__heading {
+    max-width: 500px;
+    font-size: 8rem;
+    line-height: 0.95;
+    letter-spacing: -3.2px;
+  }
+
+  .hero__desc {
+    max-width: 370px;
+  }
+
+  .hero__cta-group {
+    margin-top: 30px;
+  }
+
+  .hero__link {
+    font-size: 1.8rem;
+  }
+
+  .social-group {
+    bottom: 30px;
+  }
+
+  .social__desc {
+    font-size: 1.6rem;
+  }
+
+  .social__icon {
+    scale: 1.55;
+  }
+
+  .hero__decor--left {
+    scale: 1.7;
+    translate: -35% -54%;
   }
 }
