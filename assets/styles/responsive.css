@@ -553,4 +553,37 @@
     width: 370px;
     height: 529px;
   }
+
+  /* Contact */
+  .contact {
+    padding: 68px 0;
+  }
+
+  .contact__icon {
+    width: 90px;
+  }
+
+  .contact__heading {
+    max-width: 100%;
+  }
+
+  .contact__desc {
+    margin-top: 20px;
+    max-width: 574px;
+    font-size: 1.8rem;
+    line-height: 1.6;
+  }
+
+  .contact__btn {
+    margin-top: 40px;
+  }
+
+  .contact__decor {
+    scale: 1.8;
+  }
+
+  .contact__decor--left,
+  .contact__decor--right {
+    translate: 0;
+  }
 }
