@@ -965,37 +965,83 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <img
-        src="./assets/images/avatar.png"
-        alt="avatar"
-        class="footer__avatar"
-      />
+      <div class="footer__content">
+        <img
+          src="./assets/images/avatar.png"
+          alt="avatar"
+          class="footer__avatar"
+        />
 
-      <!-- Nav -->
-      <nav class="footer__nav">
-        <ul class="footer__nav-list">
-          <li><a href="#!" class="footer__nav-item">Projects</a></li>
-          <li><a href="#!" class="footer__nav-item">Journey</a></li>
-          <li><a href="#!" class="footer__nav-item">Service</a></li>
-          <li><a href="#!" class="footer__nav-item">Contact</a></li>
+        <!-- Nav on mobile -->
+        <nav class="footer__nav">
+          <ul class="footer__nav-list">
+            <li><a href="#!" class="footer__nav-item">Projects</a></li>
+            <li><a href="#!" class="footer__nav-item">Journey</a></li>
+            <li><a href="#!" class="footer__nav-item">Service</a></li>
+            <li><a href="#!" class="footer__nav-item">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mail group -->
+        <div href="#!" class="mail-group">
+          <a href="#!" class="circle">
+            <img
+              src="./assets/images/letter.svg"
+              alt=""
+              class="mail__letter-icon"
+            />
+          </a>
+          <a href="#!" class="mail__link">hi@arif.interactive</a>
+        </div>
+      </div>
+
+      <!-- Nav bar -->
+      <nav class="nav">
+        <div class="nav__circle-group">
+          <!-- Mail group -->
+          <div class="mail-group">
+            <a href="#!" class="circle">
+              <img
+                src="./assets/images/letter.svg"
+                alt=""
+                class="mail__letter-icon"
+              />
+            </a>
+            <a href="#!" class="mail__link">hi@arif.interactive</a>
+          </div>
+        </div>
+
+        <!-- Avatar -->
+        <a href="#header" class="nav__avatar-wrap"
+          ><img
+            src="./assets/images/avatar.png"
+            alt="avatar"
+            class="nav__avatar"
+        /></a>
+
+        <!-- Nav list -->
+        <ul class="nav-list">
+          <li>
+            <a href="#service" class="nav-item">Service</a>
+          </li>
+          <li>
+            <a href="#project" class="nav-item">Projects</a>
+          </li>
+          <li>
+            <a href="#stat" class="nav-item">Journey</a>
+          </li>
+          <li>
+            <a href="#contact" class="nav-item">Contact</a>
+          </li>
         </ul>
       </nav>
 
-      <!-- Mail group -->
-      <div href="#!" class="mail-group">
-        <a href="#!" class="circle">
-          <img
-            src="./assets/images/letter.svg"
-            alt=""
-            class="mail__letter-icon"
-          />
-        </a>
-        <a href="#!" class="mail__link">hi@arif.interactive</a>
+      <div class="footer__group">
+        <p class="footer__privacy">Privacy Policy | Terms of Conditions</p>
+        <p class="footer__copyright">
+          ©interactiveArif 2021. All rights reserved.
+        </p>
       </div>
-      <p class="footer__privacy">Privacy Policy | Terms of Conditions</p>
-      <p class="footer__copyright">
-        ©interactiveArif 2021. All rights reserved.
-      </p>
     </footer>
   </body>
 </html>

@@ -192,15 +192,16 @@
 
   /* Header */
   .header {
-    padding-top: 20px;
-    height: 100vh;
+    padding-top: 47px;
   }
 
   /* Nav */
   .nav {
     max-width: calc(100% - 270px);
+    padding: 0;
     border-bottom: none;
     flex-wrap: nowrap;
+    position: relative;
   }
 
   .menu-toggle {
@@ -222,6 +223,10 @@
   .nav__avatar {
     width: 100px;
     height: 100px;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    translate: 50% -50%;
   }
 
   .nav-list {
@@ -241,7 +246,7 @@
   /* Hero */
   .hero__img {
     width: 565px;
-    height: 638px;
+    height: 685px;
   }
 
   .hero__heading {
@@ -277,7 +282,7 @@
 
   .hero__decor--left {
     scale: 1.7;
-    translate: -35% -54%;
+    translate: -35% -51%;
   }
 
   .hero__decor--right {
@@ -557,6 +562,7 @@
   /* Contact */
   .contact {
     padding: 68px 0;
+    max-width: calc(100% - 270px);
   }
 
   .contact__icon {
@@ -585,5 +591,49 @@
   .contact__decor--left,
   .contact__decor--right {
     translate: 0;
+  }
+
+  /* Footer */
+  .footer {
+    max-width: 100%;
+    margin-top: 77px;
+    padding: 10px 0 30px;
+  }
+
+  .footer .nav {
+    display: flex;
+  }
+
+  .footer__content {
+    display: none;
+  }
+
+  .footer .nav__avatar {
+    translate: 27% -50%;
+  }
+
+  .footer .mail-group {
+    margin-top: 0;
+  }
+
+  .footer__group {
+    max-width: calc(100% - 170px);
+    margin: 60px auto 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 130px 0;
+    border-top: 1px solid #525771;
+  }
+
+  .footer__copyright {
+    order: 1;
+    margin-top: 0;
+  }
+
+  .footer__privacy {
+    margin-top: 0;
+    padding: 0;
+    border-bottom: none;
+    order: 2;
   }
 }

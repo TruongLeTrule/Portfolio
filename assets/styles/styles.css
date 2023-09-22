@@ -953,6 +953,10 @@ main > .container {
   padding: 60px 0 29px;
 }
 
+.footer .nav {
+  display: none;
+}
+
 .footer__avatar {
   width: 100px;
   height: 100px;
