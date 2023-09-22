@@ -79,7 +79,7 @@
 
   /* Stat */
   .stat__desc {
-    width: 400px;
+    max-width: 400px;
     margin: 20px auto 0;
   }
 
@@ -423,5 +423,49 @@
 
   .project__btn {
     margin-top: 80px;
+  }
+
+  /* Stat */
+  .stat {
+    margin-top: 80px;
+  }
+
+  .stat__greeting {
+    font-size: 3 2rem;
+  }
+
+  .stat__desc {
+    margin-top: 15px;
+    max-width: 570px;
+  }
+
+  .stat-group {
+    max-width: 946px;
+    margin: 70px auto 0;
+    padding: 20px 115px;
+  }
+
+  .stat-item:first-child {
+    order: 1;
+  }
+
+  .stat-item:nth-child(2) {
+    order: 2;
+  }
+
+  .stat-item__number {
+    font-size: 5.6rem;
+  }
+
+  .stat-item__desc {
+    font-size: 1.8rem;
+  }
+
+  .stat-video {
+    margin-top: 70px;
+  }
+
+  .stat-video__thumb {
+    height: 628px;
   }
 }
