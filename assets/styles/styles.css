@@ -168,12 +168,15 @@ main > .container {
   border-bottom: 1px solid #d6d3e2;
 }
 
+.nav__avatar-wrap {
+  order: 1;
+}
+
 .nav__avatar {
   width: 37px;
   height: 44px;
   object-fit: cover;
   translate: -7px 3px;
-  order: 1;
 }
 
 .nav__circle-group {

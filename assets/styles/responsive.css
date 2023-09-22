@@ -46,15 +46,6 @@
     margin-top: 0;
   }
 
-  .client-group--small:nth-child(2),
-  .client-group--small:nth-child(4) {
-    justify-items: flex-start;
-  }
-
-  /* .client-item ~ .client-item {
-      margin-top: 0;
-    } */
-
   /* Service */
   .service-item {
     max-width: 100%;
@@ -157,8 +148,64 @@
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-}
+  /* Common */
+  .circle {
+    width: 46px;
+    height: 46px;
+  }
 
-/* X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
+  .mail__letter-icon {
+    width: 24px;
+  }
+
+  .mail__link {
+    font-size: 2.2rem;
+  }
+
+  /* Header */
+  .header {
+    padding-top: 20px;
+  }
+
+  /* Nav */
+  .nav {
+    max-width: calc(100% - 270px);
+    border-bottom: none;
+    flex-wrap: nowrap;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav__circle-group {
+    order: 1;
+  }
+
+  .nav .mail__link {
+    display: inline;
+  }
+
+  .nav__avatar-wrap {
+    order: 2;
+  }
+
+  .nav__avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .nav-list {
+    display: flex;
+    column-gap: 42px;
+    order: 3;
+  }
+
+  .nav-item {
+    color: #51586a;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
 }
