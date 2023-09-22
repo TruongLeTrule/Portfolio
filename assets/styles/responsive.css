@@ -468,4 +468,34 @@
   .stat-video__thumb {
     height: 628px;
   }
+
+  /* Feedback */
+  .feedback {
+    margin-top: -323px;
+    padding: 473px 0 74px;
+  }
+
+  .feedback__desc {
+    max-width: 570px;
+  }
+
+  .feedback-group {
+    margin-top: 60px;
+  }
+
+  .feedback-item {
+    max-width: 679px;
+  }
+
+  .feedback-item__content {
+    font-size: 2.4rem;
+  }
+
+  .feedback-item__info {
+    margin-top: 36px;
+  }
+
+  .feedback .active-group {
+    margin-top: 40px;
+  }
 }

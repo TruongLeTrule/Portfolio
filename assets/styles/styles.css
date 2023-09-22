@@ -689,12 +689,12 @@ main > .container {
 .feedback__desc,
 .feedback-item__content {
   text-align: center;
-  max-width: 351px;
   margin: 0 auto;
 }
 
 .feedback__desc {
   margin-top: 20px;
+  max-width: 351px;
 }
 
 /* Feedback group */
@@ -704,6 +704,11 @@ main > .container {
 
 .feedback-group .row {
   translate: 0;
+}
+
+.feedback-item {
+  max-width: 350px;
+  margin: 0 auto;
 }
 
 .feedback-item__content {
