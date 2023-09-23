@@ -498,7 +498,7 @@ main > .container {
 }
 
 .service-group .row {
-  translate: 0;
+  transition: 0.25s ease;
 }
 
 .service-item {
@@ -870,9 +870,10 @@ main > .container {
   bottom: 0;
 }
 
-.feedback__arrow--left:hover,
-.feedback__arrow--right:hover {
+.feedback__arrow--left,
+.feedback__arrow--right {
   cursor: pointer;
+  display: none;
 }
 
 .feedback-decor--left {

@@ -103,6 +103,11 @@
     translate: -99% -102%;
   }
 
+  .feedback__arrow--left,
+  .feedback__arrow--right {
+    display: flex;
+  }
+
   /* FAQ */
   .faq__heading {
     max-width: 400px;
