@@ -169,7 +169,7 @@
   .mail__letter-icon {
     width: 24px;
     translate: 0 -81px;
-    transition: translate 0.25s ease;
+    transition: translate 0.25s ease-out;
   }
 
   .mail-group .circle {

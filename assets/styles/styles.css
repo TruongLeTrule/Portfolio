@@ -88,7 +88,6 @@ a {
   justify-content: center;
   align-items: center;
   column-gap: 15px;
-
   margin-top: 32px;
 }
 
@@ -97,6 +96,8 @@ a {
   height: 16px;
   border-radius: 50%;
   background-color: rgba(8, 4, 21, 0.2);
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .active-circle.active {
@@ -113,7 +114,6 @@ a {
   height: 20px;
   border-radius: 50%;
   border: 1px solid var(--primary-color);
-
   position: absolute;
   top: 50%;
   left: 50%;
@@ -125,7 +125,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-
   /* Style circle */
   flex-shrink: 0;
   width: 32px;
@@ -811,6 +810,7 @@ main > .container {
 
 .feedback-group .row {
   translate: 0;
+  transition: transform 1.5s ease;
 }
 
 .feedback-item {
@@ -863,9 +863,16 @@ main > .container {
 
 /* Feedback decor */
 .feedback-decor--left,
-.feedback-decor--right {
+.feedback-decor--right,
+.feedback__arrow--left,
+.feedback__arrow--right {
   position: absolute;
   bottom: 0;
+}
+
+.feedback__arrow--left:hover,
+.feedback__arrow--right:hover {
+  cursor: pointer;
 }
 
 .feedback-decor--left {
@@ -874,6 +881,16 @@ main > .container {
 
 .feedback-decor--right {
   right: 0;
+}
+
+.feedback__arrow--left {
+  bottom: 20%;
+  left: 18%;
+}
+
+.feedback__arrow--right {
+  bottom: 20%;
+  right: 18%;
 }
 
 /******************** FAQ ********************/
