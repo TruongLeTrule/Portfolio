@@ -585,7 +585,7 @@ main > .container {
 }
 
 .projet-item__content {
-  width: 53%;
+  width: 54%;
 }
 
 .project-item__heading {
@@ -1013,6 +1013,12 @@ main > .container {
   object-fit: cover;
   display: block;
   margin: 0 auto;
+  transition: scale 0.2s ease;
+}
+
+/* Img hover */
+.mood__img-wrap:hover .mood__img {
+  scale: 1.1;
 }
 
 /******************** Contact ********************/
