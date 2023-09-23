@@ -963,6 +963,12 @@ main > .container {
   color: var(--primary-color);
 }
 
+/* FAQ item hover */
+.faq-item__question,
+.faq__toggle-btn {
+  cursor: pointer;
+}
+
 /******************** Mood ********************/
 .mood {
   margin: 60px auto 0;
