@@ -72,6 +72,14 @@ a {
   font-style: normal;
   font-weight: 700;
   line-height: var(--height);
+  transition: opacity 0.1 s;
+}
+
+/* Button hover */
+.btn:hover {
+  background-color: var(--primary-color);
+  color: #fdfdfd;
+  opacity: 0.9;
 }
 
 /* Active circle group */
@@ -177,6 +185,13 @@ main > .container {
   height: 44px;
   object-fit: cover;
   translate: -7px 3px;
+  transition: scale 0.25s, rotate 0.25s;
+}
+
+/* Hover avatar */
+.nav__avatar:hover {
+  scale: 1.15;
+  rotate: 5deg;
 }
 
 .nav__circle-group {
@@ -289,7 +304,13 @@ main > .container {
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 700;
-  text-decoration-line: underline;
+  text-decoration: underline;
+  padding: 15px 0;
+  transition: opacity 0.1s;
+}
+
+.hero__link:hover {
+  opacity: 0.7;
 }
 
 .social-group {
@@ -310,6 +331,59 @@ main > .container {
 .social__circle-group {
   display: flex;
   column-gap: 15px;
+}
+
+.social__circle-group .circle {
+  position: relative;
+  z-index: 1;
+  transition: border 0.1s, background-color 0.1s ease;
+}
+
+.social__circle-group .circle:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  border-radius: 50%;
+  background-image: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.1s ease;
+}
+
+.social__icon {
+  color: rgba(8, 4, 21, 1);
+  transition: color 0.1s ease;
+}
+
+/* Social icon hover */
+.social__circle-group .circle:hover {
+  border: none;
+}
+
+.social-group .circle:first-child:hover {
+  background-color: #0056ff;
+}
+
+.social-group .circle:nth-child(2):hover {
+  background-color: #ffabe7;
+}
+
+.social__circle-group .circle:nth-child(3):hover::before {
+  opacity: 1;
+}
+
+.social__circle-group .circle:hover .social__icon {
+  color: #fff;
 }
 
 /* Hero media */

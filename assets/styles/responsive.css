@@ -168,6 +168,22 @@
 
   .mail__letter-icon {
     width: 24px;
+    translate: 0 -81px;
+    transition: translate 0.25s ease;
+  }
+
+  .mail-group .circle {
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+
+  /* Hover mail address */
+  .mail-group:hover .circle {
+    opacity: 1;
+  }
+
+  .mail-group:hover .mail__letter-icon {
+    translate: 0;
   }
 
   .mail__link {
@@ -241,6 +257,12 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    padding: 8px 0;
+    transition: opacity 0.15s;
+  }
+
+  .nav-item:hover {
+    opacity: 0.75;
   }
 
   /* Hero */
