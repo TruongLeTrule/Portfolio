@@ -728,6 +728,7 @@ main > .container {
   opacity: 0.8;
   object-fit: cover;
   object-position: -50px -1px;
+  transition: opacity 0.25s ease;
 }
 
 .stat-video__play-btn,
@@ -740,7 +741,6 @@ main > .container {
   top: 50%;
   left: 50%;
   translate: -50% -50%;
-
   /* Style */
   width: 77px;
   height: 77px;
@@ -749,11 +749,11 @@ main > .container {
   border: none;
   outline: none;
   opacity: 0.9;
-
   /* Center the play button */
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: opacity 0.25s ease;
 }
 
 .stat-video__label {
@@ -771,6 +771,16 @@ main > .container {
   font-style: normal;
   font-weight: 700;
   line-height: 2.5;
+}
+
+/* Hover video */
+.stat-video:hover {
+  cursor: pointer;
+}
+
+.stat-video:hover .stat-video__thumb,
+.stat-video:hover .stat-video__play-btn {
+  opacity: 1;
 }
 
 /******************** Feedback ********************/
