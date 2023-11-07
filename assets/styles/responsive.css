@@ -664,3 +664,16 @@
     order: 2;
   }
 }
+
+/* Hide avatar on navbar on small desktop screen */
+@media (min-width: 992px) {
+  .nav__avatar-wrap {
+    display: none;
+  }
+}
+
+@media (min-width: 1215px) {
+  .nav__avatar-wrap {
+    display: inline;
+  }
+}
