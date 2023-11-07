@@ -1,170 +1,205 @@
-// Feedback Slider
+// Feedback slider
 const feedbackCircles = Array.from(
-  document.querySelectorAll(".feedback .active-circle")
-);
-const feedbackGroup = document.querySelector(".feedback-group .row"),
+    document.querySelectorAll(".feedback .active-circle")
+  ),
+  feedbackGroup = document.querySelector(".feedback-group .row"),
   feedbackArrowRight = document.querySelector(".feedback__arrow--right"),
   feedbackArrowLeft = document.querySelector(".feedback__arrow--left");
 
-// Service slide
+// Service slider
 const serviceGroup = document.querySelector(".service-group .row"),
   serviceItems = Array.from(document.querySelectorAll(".service-item"));
 serviceCircles = Array.from(
   document.querySelectorAll(".service .active-circle")
 );
 
+// Mood slider
+const moodGroup = document.querySelector(".mood__img-group .row"),
+  moodItems = Array.from(document.querySelectorAll(".mood__img-wrap"));
+moodCircles = Array.from(document.querySelectorAll(".mood .active-circle"));
+
 //   Feedback object
-const feedback = {
-  currentIndex: 0,
-
-  feedbackSlider() {
-    // Set current index and toggle the circle active
-    const _this = feedback;
-    feedbackCircles[_this.currentIndex].classList.remove("active");
-    _this.currentIndex += 1;
-    _this.checkIndex();
-    // Move to next feedback
-    feedbackGroup.style.transform = `translateX(-${_this.currentIndex}00%)`;
-  },
-
-  checkIndex() {
-    if (this.currentIndex >= feedbackCircles.length) {
-      this.currentIndex = 0;
-      feedbackCircles[this.currentIndex].classList.add("active");
-    } else if (this.currentIndex <= 0) {
-      this.currentIndex = feedbackCircles.length - 1;
-      feedbackCircles[this.currentIndex].classList.add("active");
-    } else {
-      feedbackCircles[this.currentIndex].classList.add("active");
-    }
-  },
-
-  nextFeedback() {
-    const _this = this;
-    feedbackArrowRight.onclick = function () {
-      feedbackCircles[_this.currentIndex].classList.remove("active");
-      _this.currentIndex += 1;
-      _this.checkIndex();
-
-      // Move to next feedback
-      feedbackGroup.style.transform = `translateX(-${_this.currentIndex}00%)`;
-    };
-  },
-
-  preFeedback() {
-    const _this = this;
-    feedbackArrowLeft.onclick = function () {
-      feedbackCircles[_this.currentIndex].classList.remove("active");
-      _this.currentIndex -= 1;
-      _this.checkIndex();
-
-      // Move to previous feedback
-      feedbackGroup.style.transform = `translateX(-${_this.currentIndex}00%)`;
-    };
-  },
+class AutoSlider {
+  constructor(sliderGroup, sliderCircles, arrowRight, arrowLeft) {
+    this.currentIndex = 0;
+    this.sliderGroup = sliderGroup;
+    this.sliderCircles = sliderCircles;
+    this.arrowRight = arrowRight;
+    this.arrowLeft = arrowLeft;
+    this.intervalID;
+    this.sliderDelayTime = 3000;
+  }
 
   start() {
-    feedbackCircles[this.currentIndex].classList.add("active");
+    this.sliderCircles[this.currentIndex].classList.add("active");
     // Auto move to next feedback
-    setInterval(this.feedbackSlider, 5000);
+    this.intervalID = setInterval(
+      () => this.sliderMove(),
+      this.sliderDelayTime
+    );
     // Move to next feedback
     this.nextFeedback();
     // Move to previous feedback
     this.preFeedback();
-  },
-};
 
-const serviceObj = {
-  isDragging: false,
-  startPos: 0,
-  currentTranslate: 0,
-  preTranslate: 0,
-  animationID: 0,
-  currentIndex: 0,
-  _this: this,
+    this.arrowRight.addEventListener("click", () => this.nextFeedback());
+    this.arrowLeft.addEventListener("click", () => this.preFeedback());
+  }
+
+  sliderMove() {
+    // Set current index and toggle the circle active
+    this.sliderCircles[this.currentIndex].classList.remove("active");
+    this.currentIndex += 1;
+    this.checkIndex();
+    // Move to next feedback
+    this.sliderGroup.style.transform = `translateX(-${this.currentIndex}00%)`;
+  }
+
+  checkIndex() {
+    if (this.currentIndex >= feedbackCircles.length) {
+      this.currentIndex = 0;
+      this.sliderCircles[this.currentIndex].classList.add("active");
+    } else if (this.currentIndex < 0) {
+      this.currentIndex = this.sliderCircles.length - 1;
+      this.sliderCircles[this.currentIndex].classList.add("active");
+    } else {
+      this.sliderCircles[this.currentIndex].classList.add("active");
+    }
+  }
+
+  nextFeedback() {
+    clearInterval(this.intervalID);
+    this.sliderCircles[this.currentIndex].classList.remove("active");
+    this.currentIndex += 1;
+    this.checkIndex();
+
+    // Move to next feedback
+    this.sliderGroup.style.transform = `translateX(-${this.currentIndex}00%)`;
+
+    // Auto move to next feedback
+    this.intervalID = setInterval(
+      () => this.sliderMove(),
+      this.sliderDelayTime
+    );
+  }
+
+  preFeedback() {
+    clearInterval(this.intervalID);
+    this.sliderCircles[this.currentIndex].classList.remove("active");
+    this.currentIndex -= 1;
+    this.checkIndex();
+
+    // Move to previous feedback
+    this.sliderGroup.style.transform = `translateX(-${this.currentIndex}00%)`;
+
+    // Auto move to next feedback
+    this.intervalID = setInterval(
+      () => this.sliderMove(),
+      this.sliderDelayTime
+    );
+  }
+}
+
+class Slider {
+  constructor(sliderGroup, sliderItems, sliderCircles) {
+    this.sliderCircles = sliderCircles;
+    this.sliderGroup = sliderGroup;
+    this.sliderItems = sliderItems;
+    this.isDragging = false;
+    this.startPos = 0;
+    this.currentTranslate = 0;
+    this.preTranslate = 0;
+    this.animationID = 0;
+    this.currentIndex = 0;
+  }
 
   start() {
-    serviceItems.forEach((service, index) => {
-      const serviceImage = service.querySelector("img");
-      serviceImage.addEventListener("dragstart", (e) => e.preventDefault());
+    this.sliderItems.forEach((item, index) => {
+      const itemImage = item.querySelector("img");
+      itemImage.addEventListener("dragstart", (e) => e.preventDefault());
 
       // Touch events
-      service.addEventListener("touchstart", this.touchstart(index));
-      service.addEventListener("touchend", this.touchend);
-      service.addEventListener("touchmove", this.touchmove);
+      item.addEventListener("touchstart", (event) =>
+        this.touchstart(event, index)
+      );
+      item.addEventListener("touchend", (event) => this.touchend(event));
+      item.addEventListener("touchmove", (event) => this.touchmove(event));
     });
-  },
+  }
 
-  touchstart(index) {
-    const _this = this;
-    return function (event) {
-      _this.currentIndex = index;
-      _this.startPos = _this.getPositionX(event);
-      _this.isDragging = true;
-
-      _this.animationID = requestAnimationFrame(_this.animation);
-    };
-  },
+  touchstart(event, index) {
+    this.currentIndex = index;
+    this.startPos = this.getPositionX(event);
+    this.isDragging = true;
+    this.animationID = requestAnimationFrame(() => this.animation());
+  }
 
   touchend() {
-    const _this = serviceObj;
-    _this.isDragging = false;
-    cancelAnimationFrame(_this.animationID);
+    this.isDragging = false;
+    cancelAnimationFrame(this.animationID);
 
-    const movedBy = _this.currentTranslate - _this.preTranslate;
+    const movedBy = this.currentTranslate - this.preTranslate;
 
-    if (movedBy < -100 && _this.currentIndex < serviceItems.length - 1) {
-      _this.removeActive();
-      _this.currentIndex += 1;
+    if (movedBy < -100 && this.currentIndex < this.sliderItems.length - 1) {
+      this.removeActive();
+      this.currentIndex += 1;
     }
 
-    if (movedBy > 100 && _this.currentIndex > 0) {
-      _this.removeActive();
-      _this.currentIndex -= 1;
+    if (movedBy > 100 && this.currentIndex > 0) {
+      this.removeActive();
+      this.currentIndex -= 1;
     }
 
-    serviceObj.setPositionByIndex();
+    this.setPositionByIndex();
 
-    _this.setActive();
-  },
+    this.setActive();
+  }
 
   touchmove(event) {
-    const _this = serviceObj;
-    if (_this.isDragging) {
-      const currentPosition = _this.getPositionX(event);
-      _this.currentTranslate =
-        _this.preTranslate + currentPosition - _this.startPos;
+    if (this.isDragging) {
+      const currentPosition = this.getPositionX(event);
+      this.currentTranslate =
+        this.preTranslate + currentPosition - this.startPos;
     }
-  },
+  }
 
   getPositionX(event) {
     return event.touches[0].clientX;
-  },
+  }
 
   animation() {
-    const _this = serviceObj;
-    _this.setSliderPosition();
-    if (_this.isDragging) requestAnimationFrame(_this.animation);
-  },
+    this.setSliderPosition();
+    if (this.isDragging) requestAnimationFrame(() => this.animation());
+  }
 
   setSliderPosition() {
-    serviceGroup.style.transform = `translateX(${this.currentTranslate}%)`;
-  },
+    this.sliderGroup.style.transform = `translateX(${this.currentTranslate}%)`;
+  }
 
   setPositionByIndex() {
     this.currentTranslate = this.currentIndex * -100;
     this.preTranslate = this.currentTranslate;
     this.setSliderPosition();
-  },
+  }
 
   setActive() {
-    serviceCircles[this.currentIndex].classList.add("active");
-  },
+    this.sliderCircles[this.currentIndex].classList.add("active");
+  }
 
   removeActive() {
-    serviceCircles[this.currentIndex].classList.remove("active");
-  },
-};
+    this.sliderCircles[this.currentIndex].classList.remove("active");
+  }
+}
 
-feedback.start();
-serviceObj.start();
+const feedbackAutoSlider = new AutoSlider(
+  feedbackGroup,
+  feedbackCircles,
+  feedbackArrowRight,
+  feedbackArrowLeft
+);
+const serviceSlider = new Slider(serviceGroup, serviceItems, serviceCircles);
+const moodSlider = new Slider(moodGroup, moodItems, moodCircles);
+
+feedbackAutoSlider.start();
+serviceSlider.start();
+moodSlider.start();
