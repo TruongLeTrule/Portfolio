@@ -71,9 +71,7 @@
   }
 
   .stat-video__thumb {
-    width: 100%;
     height: auto;
-    object-position: 0 0;
   }
 
   /* Feedback */
@@ -368,7 +366,9 @@
   }
 
   .project-item__img {
-    width: 246px;
+    min-width: 246px;
+    height: 150px;
+    object-fit: cover;
   }
 
   .project-item__link {
