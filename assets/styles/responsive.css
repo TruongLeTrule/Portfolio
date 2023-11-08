@@ -20,30 +20,17 @@
   }
 
   .hero__img {
-    width: 324px;
+    width: 356px;
     height: 474px;
   }
 
   .social-group {
-    left: 0;
-    bottom: 20px;
-    position: absolute;
+    margin-top: 15px;
   }
 
   .hero__decor--left {
     scale: 124%;
     translate: -38% -54%;
-  }
-
-  /* Client */
-  .client-group--large {
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 30px;
-  }
-
-  .client-group--small:nth-child(3),
-  .client-group--small:nth-child(4) {
-    margin-top: 0;
   }
 
   /* Service */
@@ -237,19 +224,6 @@
     display: inline;
   }
 
-  .nav__avatar-wrap {
-    order: 2;
-  }
-
-  .nav__avatar {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: 50%;
-    bottom: 50%;
-    translate: 50% -50%;
-  }
-
   .nav-list {
     display: flex;
     column-gap: 42px;
@@ -296,7 +270,7 @@
   }
 
   .social-group {
-    bottom: 30px;
+    padding-top: 30px;
   }
 
   .social__desc {
@@ -318,47 +292,6 @@
     right: 0;
   }
 
-  /* Client */
-  .client {
-    max-width: 100%;
-    margin: 98px 0 0;
-  }
-
-  .client__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .client__heading {
-    font-size: 4.2rem;
-    line-height: 1.19;
-    letter-spacing: -1.68px;
-    margin: 0;
-    margin-left: 99px;
-    max-width: 253px;
-    text-align: left;
-  }
-
-  .client__heading::before {
-    width: 86px;
-    left: -57px;
-    top: 22px;
-  }
-
-  .client-group--large {
-    margin-top: 0;
-  }
-
-  .client-item ~ .client-item {
-    margin-top: 34px;
-  }
-
-  .client-group--small:nth-child(2),
-  .client-group--small:nth-child(4) {
-    justify-items: flex-start;
-  }
-
   /* Service */
   .service {
     margin-top: 73px;
@@ -375,7 +308,7 @@
 
   .service-item {
     max-width: 370px;
-    height: 306px;
+    height: 375px;
     padding: 33px 42px;
   }
 
@@ -394,10 +327,6 @@
 
   .service .active-group {
     display: none;
-  }
-
-  .service .col:last-child img {
-    translate: -3px 8px;
   }
 
   /* Project */
@@ -635,10 +564,6 @@
     display: none;
   }
 
-  .footer .nav__avatar {
-    translate: 27% -50%;
-  }
-
   .footer .mail-group {
     margin-top: 0;
   }
@@ -662,18 +587,5 @@
     padding: 0;
     border-bottom: none;
     order: 2;
-  }
-}
-
-/* Hide avatar on navbar on small desktop screen */
-@media (min-width: 992px) {
-  .nav__avatar-wrap {
-    display: none;
-  }
-}
-
-@media (min-width: 1215px) {
-  .nav__avatar-wrap {
-    display: inline;
   }
 }
