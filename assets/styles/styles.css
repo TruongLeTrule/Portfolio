@@ -354,7 +354,7 @@ main > .container {
 }
 
 .social-group .circle:nth-child(2):hover {
-  background-color: #ffabe7;
+  background-color: #ff0000;
 }
 
 .social__circle-group .circle:nth-child(3)::before {
