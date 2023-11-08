@@ -8,17 +8,23 @@ const feedbackCircles = Array.from(
 
 // Service slider
 const serviceGroup = document.querySelector(".service-group .row"),
-  serviceItems = Array.from(document.querySelectorAll(".service-item"));
-serviceCircles = Array.from(
-  document.querySelectorAll(".service .active-circle")
-);
+  serviceItems = Array.from(document.querySelectorAll(".service-item")),
+  serviceCircles = Array.from(
+    document.querySelectorAll(".service .active-circle")
+  );
 
 // Mood slider
 const moodGroup = document.querySelector(".mood__img-group .row"),
-  moodItems = Array.from(document.querySelectorAll(".mood__img-wrap"));
-moodCircles = Array.from(document.querySelectorAll(".mood .active-circle"));
+  moodItems = Array.from(document.querySelectorAll(".mood__img-wrap")),
+  moodCircles = Array.from(document.querySelectorAll(".mood .active-circle"));
 
-//   Feedback object
+// Video
+const videoWrap = document.querySelector("#stat-video"),
+  video = document.querySelector(".stat-video__thumb"),
+  videoBtn = document.querySelector(".stat-video__play-btn");
+let isPlaying = 0;
+
+//   Autoslider class
 class AutoSlider {
   constructor(sliderGroup, sliderCircles, arrowRight, arrowLeft) {
     this.currentIndex = 0;
@@ -116,8 +122,9 @@ class Slider {
   start() {
     this.sliderItems.forEach((item, index) => {
       const itemImage = item.querySelector("img");
-      itemImage.addEventListener("dragstart", (e) => e.preventDefault());
-
+      if (itemImage) {
+        itemImage.addEventListener("dragstart", (e) => e.preventDefault());
+      }
       // Touch events
       item.addEventListener("touchstart", (event) =>
         this.touchstart(event, index)
@@ -203,3 +210,16 @@ const moodSlider = new Slider(moodGroup, moodItems, moodCircles);
 feedbackAutoSlider.start();
 serviceSlider.start();
 moodSlider.start();
+
+videoWrap.addEventListener("click", () => {
+  if (isPlaying) {
+    videoBtn.style.display = "block";
+    video.style.opacity = 0.8;
+    video.pause();
+  } else {
+    videoBtn.style.display = "none";
+    video.style.opacity = 1;
+    video.play();
+  }
+  isPlaying = !isPlaying;
+});

@@ -428,13 +428,8 @@ main > .container {
   max-width: 350px;
   height: 355px;
   background-color: #fbfaff;
-
   padding: 29px 50px;
   margin: 0 auto;
-}
-
-.service-group img {
-  translate: 0 5px;
 }
 
 .service-item__icon {
@@ -649,7 +644,6 @@ main > .container {
   height: 276px;
   opacity: 0.8;
   object-fit: cover;
-  object-position: -50px -1px;
   transition: opacity 0.25s ease;
 }
 

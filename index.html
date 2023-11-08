@@ -99,6 +99,15 @@
       rel="stylesheet"
     />
 
+    <!-- Embed font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <!-- Styles -->
     <link rel="stylesheet" href="./assets/styles/styles.css" />
 
@@ -340,7 +349,7 @@
               <div class="col">
                 <article class="service-item">
                   <div class="service-item__icon circle">
-                    <img src="./assets/images/light-bulb.svg" alt="" />
+                    <i class="fa-solid fa-shirt fa-2x"></i>
                   </div>
                   <h3 class="heading--small service-item__heading">Fashion</h3>
                   <p class="desc service-item__desc">
@@ -355,7 +364,7 @@
               <div class="col">
                 <article class="service-item">
                   <div class="service-item__icon circle">
-                    <img src="./assets/images/light-bulb.svg" alt="" />
+                    <i class="fa-solid fa-face-smile fa-2x"></i>
                   </div>
                   <h3 class="heading--small service-item__heading">Portrait</h3>
                   <p class="desc service-item__desc">
@@ -370,7 +379,7 @@
               <div class="col">
                 <article class="service-item">
                   <div class="service-item__icon circle">
-                    <img src="./assets/images/light-bulb.svg" alt="" />
+                    <i class="fa-solid fa-mountain-sun fa-2x"></i>
                   </div>
                   <h3 class="heading--small service-item__heading">
                     Landscape
@@ -402,10 +411,6 @@
             <h1 class="heading project__heading">
               Take a look at my recent projects
             </h1>
-            <p class="project__desc desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna,
-              non nisl tincidunt ut elementum turpis.
-            </p>
           </section>
 
           <!-- Project group -->
@@ -546,50 +551,26 @@
           <!-- Header -->
           <section class="stat__header">
             <div>
-              <span class="stat__greeting">Hey,,,,It’s Arif</span>
+              <span class="stat__greeting">Hey,,,,It’s Truong</span>
               <img src="./assets/images/waving.svg" alt="hand-waving" />
             </div>
-            <h2 class="stat__heading heading">Interactive Designer</h2>
+            <h2 class="stat__heading heading">My recently video</h2>
             <p class="stat__desc desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna,
-              non nisl tincidunt ut elementum turpis.
+              Take a look at my video taken for a barbershop.
             </p>
           </section>
 
-          <!-- Stat group -->
-          <div class="stat-group">
-            <!-- Stat 1 -->
-            <div class="stat-item">
-              <strong class="stat-item__number">08+</strong>
-              <p class="stat-item__desc desc">Years Experience</p>
-            </div>
-
-            <!-- Stat 2 -->
-            <div class="stat-item">
-              <strong class="stat-item__number">21+</strong>
-              <p class="stat-item__desc desc">Features & Awards</p>
-            </div>
-
-            <!-- Stat 3 -->
-            <div class="stat-item">
-              <strong class="stat-item__number">97%</strong>
-              <p class="stat-item__desc desc">Clients Rating</p>
-            </div>
-          </div>
-
           <!-- Video -->
-          <div class="stat-video">
-            <img
-              src="./assets/images/video-thumb.png"
-              alt="thumbnail"
+          <div class="stat-video" id="stat-video">
+            <video
+              poster="./assets/images/video-thumb.png"
               class="stat-video__thumb"
-            />
-
+            >
+              <source src="./assets/video.mp4" type="video/mp4" />
+            </video>
             <button class="stat-video__play-btn">
               <img src="./assets/images/play.svg" alt="" />
             </button>
-
-            <div class="stat-video__label">INTRO VIDEO</div>
           </div>
         </section>
       </div>
