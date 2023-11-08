@@ -33,7 +33,7 @@ class AutoSlider {
     this.arrowRight = arrowRight;
     this.arrowLeft = arrowLeft;
     this.intervalID;
-    this.sliderDelayTime = 3000;
+    this.sliderDelayTime = 5000;
   }
 
   start() {
